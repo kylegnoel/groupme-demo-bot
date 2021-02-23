@@ -12,7 +12,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=['POST'])
 def webhook():
-    data = Request.get_json()
+    data = request.get_json()
     log('Recieved {}'.format(data))
 
     # We don't want to reply to ourselves!
